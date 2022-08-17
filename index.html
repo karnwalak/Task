@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML & CSS & JavaScript-Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="container">
+        <h2>Online Quiz</h2>
+        <button id="start" type="button" onclick="showquestion()">Start</button>
+        <div id="quizDiv">
+          <div class="questionDiv">
+            <p id="question"></p>
+            <div id="answerDiv"></div>
+          </div>
+          <div class="btnDiv">
+            <button id="previous" type="button" value="0" class="btn btn-primary" onclick="showprequestiion(this.value)">Prev</button>
+            <button id="next" type="button" value="0" class="btn btn-primary" onclick="shownextquestiion(this.value)">Next</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+  <script src="js/main.js"></script>
+</html>
