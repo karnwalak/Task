@@ -30,17 +30,19 @@ const questions = [
 
 
 function showquestion(){
+  document.getElementById('messageDiv').innerHTML="";
   document.getElementById("start").style.display = 'none';
   document.getElementById("quizDiv").style.display = 'block';
   const count = 0;
   document.getElementById('question').innerHTML=questions[count].question;
   for (let i = 0; i < questions[count].answers.length; i++) {
-      const htmlRows ='<button class="ans" type="button" value="'+questions[count].answers[i].text+'" status="'+questions[count].answers[i].correct+'">'+questions[count].answers[i].text+'</button>';
+      const htmlRows ='<button class="ans" type="button" value="'+questions[count].answers[i].text+'" onclick="checkAns('+questions[count].answers[i].correct+')" status="'+questions[count].answers[i].correct+'">'+questions[count].answers[i].text+'</button>';
       document.getElementById('answerDiv').insertAdjacentHTML("beforeend",htmlRows);
   }
 }
 
 function showprequestiion(){
+  document.getElementById('messageDiv').innerHTML="";
   document.getElementById('answerDiv').innerHTML=""
   document.getElementById('question').innerHTML=""
   var pre = document.getElementById('previous').value;
@@ -53,12 +55,13 @@ function showprequestiion(){
   document.getElementById('next').value = parseInt(nxt)-1;
   document.getElementById('question').innerHTML=questions[parseInt(pre)-1].question;
   for (let i = 0; i < questions[parseInt(pre)-1].answers.length; i++) {
-    const htmlRows ='<button class="ans" type="button" value="'+questions[parseInt(pre)-1].answers[i].text+'" status="'+questions[parseInt(pre)-1].answers[i].correct+'">'+questions[parseInt(pre)-1].answers[i].text+'</button>';
+    const htmlRows ='<button class="ans" type="button" value="'+questions[parseInt(pre)-1].answers[i].text+'" onclick="checkAns('+questions[parseInt(pre)-1].answers[i].correct+')" status="'+questions[parseInt(pre)-1].answers[i].correct+'">'+questions[parseInt(pre)-1].answers[i].text+'</button>';
     document.getElementById('answerDiv').insertAdjacentHTML("beforeend",htmlRows);
   }
 }
 
 function shownextquestiion(){
+  document.getElementById('messageDiv').innerHTML="";
   document.getElementById('answerDiv').innerHTML=""
   document.getElementById('question').innerHTML=""
   var pre = document.getElementById('previous').value;
@@ -72,9 +75,23 @@ function shownextquestiion(){
   document.getElementById('next').value = parseInt(nxt)+1;
   document.getElementById('question').innerHTML=questions[parseInt(nxt)+1].question;
   for (let i = 0; i < questions[parseInt(nxt)+1].answers.length; i++) {
-      const htmlRows ='<button class="ans" type="button" value="'+questions[parseInt(nxt)+1].answers[i].text+'" status="'+questions[parseInt(nxt)+1].answers[i].correct+'">'+questions[parseInt(nxt)+1].answers[i].text+'</button>';
+      const htmlRows ='<button class="ans" type="button" value="'+questions[parseInt(nxt)+1].answers[i].text+'" onclick="checkAns('+questions[parseInt(nxt)+1].answers[i].correct+')" status="'+questions[parseInt(nxt)+1].answers[i].correct+'">'+questions[parseInt(nxt)+1].answers[i].text+'</button>';
       document.getElementById('answerDiv').insertAdjacentHTML("beforeend",htmlRows);
   }
 }
+
+
+function checkAns(status){
+  if(status == true){
+    document.getElementById('messageDiv').innerHTML="Your answer is correct!";
+    document.getElementById('messageDiv').style.color='green';
+  }else{
+    document.getElementById('messageDiv').innerHTML="Your answer is wrong!";
+    document.getElementById('messageDiv').style.color='red';
+  }
+}
+
+
+
 
 

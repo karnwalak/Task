@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS - Navigation</title>
+  <style>
+    body{
+      padding: 0;
+      margin: 0;
+      background-image: url('image/1.jpg');
+      background-size: cover;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #8DB5ED;
+      background-blend-mode: lighten;
+    }
+    ul{
+      padding: 0;
+      margin: 0;
+      background-color: teal;
+      list-style: none;
+    }
+    ul li{
+      float: left;
+      width: 200px;
+      height: 40px;
+      background-color: #003542;
+      opacity: .9;
+      padding: 10px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    ul li ul li{
+      width: 200px;
+      height: 40px;
+      background-color: #003542;
+      opacity: .9;
+      padding: 10px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 20px;
+    }
+    ul li a{
+      text-decoration: none;
+      /* padding: 10px; */
+      color: #ffff;
+      font-size: 20px;
+    }
+    ul li:hover{
+      background-color: purple;
+    }
+    ul li ul{
+      display: none;
+    }
+
+    ul li:hover ul{
+      margin-top: 12px;
+      display: block;
+    }
+    .clip{
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      background-color: #610303;
+      height: 400px;
+      width: 400px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    @keyframes blink {
+      0%{
+        background : indigo;
+      }
+      30%{
+        background: red;
+      }
+      50%{
+        background: yellow;
+      }
+      70%{
+        background: green;
+      }
+      100%{
+        background: blue;
+      }
+    }
+    .animation{
+      height: 400px;
+      width: 400px;
+      border: 1px solid black;
+      animation : blink 10s infinite;
+      -webkit-animation: blink 10s infinite;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <navbar>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Services</a>
+        <ul>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Products</a>
+        <ul>
+          <li><a href="#">Market Pluss</a></li>
+          <li><a href="#">Weazy</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About US</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+  </navbar>
+  <!-- <div class="clip"></div> -->
+  <div class="animation"></div>
+</body>
+</html>

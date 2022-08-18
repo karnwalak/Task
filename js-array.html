@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Array</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script>
+    let name = ["Yogesh Kumar Karnwal","Akshay Kumar Karnwal","Anuj Kumar Karnwal","Ankit Kumar Karnwal"]
+  // name.forEach((item)=>{
+  //   document.write(item + '<br/>')
+  // });
+  let pop = name.push("Aashish");
+  let shift = name.shift();
+  let unshift = name.unshift("Akhilesh");
+  let sirname = ["Kumar","Karnwal","Sharma","Verma"];
+  let concat = name.concat(sirname);
+  let num1 = ['1','2','3','4','5','6','7','8','9','10'];
+  let num2 = num1.map(multiply);
+  function multiply(value){
+    return 2*value;
+  }
+  let num3 = num1.filter(comp);
+  function comp(value){
+    return value>4 && value<8;
+  }
+  document.getElementById('demo').innerHTML=num3;
+  </script>
+</body>
+</html>

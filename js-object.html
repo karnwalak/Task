@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Objects</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script>
+    // var obj = {
+    //   name : "Akshay Kumar Karnwal",
+    //   mobile : "9568936879",
+    //   email : "karnwalakshay7@gmail.com",
+    //   address : "Saharanpur",
+    //   designation : "PHP Developer"
+    // }
+    // var obj = new Object();
+    // obj.name = "Akshay Kumar Karnwal",
+    // obj.mobile = "9568936879",
+    // obj.email = "karnwalakshay7@gmail.com",
+    // obj.address = "Saharanpur",
+    // obj.designation = "PHP Developer"
+    function stud(name,mobile,email,address,designation){
+         this.name = name;
+         this.mobile = mobile;
+         this.email = email;
+         this.address = address;
+         this.designation = designation;
+    }
+    var obj = stud("Akshay Kumar Karnwal","9568936879","karnwalakshay7@gmail.com","Saharanpur","PHP Developer");
+    document.getElementById("demo").innerHTML=obj;
+    // document.getElementById("demo").innerHTML='Name:-' +obj.name + '<br/>Mobile:-' + obj.mobile + '<br/>Email:-' + obj.email + '<br/>Address:-' + obj.address + '<br/>Designation:-' + obj.designation;
+  </script>
+</body>
+</html>

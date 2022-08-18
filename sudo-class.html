@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS - Sudo Class</title>
+  <style>
+     /* .box:hover{
+      background-color: cyan;
+     } */
+     .box{
+      width: 500px;
+      padding: 10px;
+      text-align: justify;
+      background-color: pink;
+     }
+     /* .box:active{
+      background-color: cyan;
+     } */
+     h1::first-letter{
+      font-family: lucida calligraphy;
+      font-size: 3cm;
+      color: red;
+      text-shadow: 5px 8px 9px cyan;
+     }
+
+     h1::before{
+      content: "<<";
+      color: red;
+     }
+     h1::after{
+      content: ">>";
+      color: red;
+     }
+  </style>
+</head>
+<body>
+  <h1>Akshay Kumar Karnwal</h1>
+  <div class="box">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt officia fuga provident amet repellat dolor dolores, in suscipit reprehenderit beatae rerum magni nostrum alias saepe, hic officiis. Ullam, unde! Architecto impedit placeat earum, officiis nemo suscipit, nulla doloribus, debitis repellat necessitatibus quam commodi! Porro odit minima officia cum. Laboriosam impedit odio ut laudantium quam vel, quis quos consequatur consectetur veritatis quidem perferendis placeat tempora fuga tempore ex est aut temporibus! Unde porro corrupti doloremque maxime, quos odit laboriosam ullam repudiandae ea incidunt a, perferendis pariatur? Enim voluptatum maxime laboriosam deserunt praesentium dolor! Culpa eius, provident omnis amet natus eligendi maxime?</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS-Keyframe</title>
+  <style>
+   .main{
+     height: 200px;
+     width: 200px;
+     background-color: red;
+     position: relative;
+     display: inline-block;
+     animation-name: myanimation;
+     animation-duration: 3s;
+     animation-iteration-count: 2;
+     animation-timing-function: ease-in-out;
+     animation-delay: 2s;
+     animation-direction: forwards;
+     animation-play-state: running;
+   }
+
+   @keyframes myanimation{
+    0%{
+      height: 200px;
+    }
+
+    40%{
+      background-color: green;
+    }
+
+    100%{
+      height: 500px;
+      background-color: pink;
+    }
+   }
+
+
+  </style>
+</head>
+<body>
+ <div class="main">
+
+ </div>
+</body>
+</html>
