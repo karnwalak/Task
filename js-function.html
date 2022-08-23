@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Function</title>
+</head>
+<body>
+  <div id="demo"></div>
+  <script>
+    // function myFunction(val){
+    //   document.getElementById('demo').innerHTML=val*val;
+    // }
+    // myFunction(6);
+
+    // var MyFunction = new Function("a","b","return a+b");
+    // var x = MyFunction(20,35);
+    // document.getElementById('demo').innerHTML="Sum is="+x;
+
+    // var circle = "return Math.PI * red * red";
+    // var area = new Function('red',circle);
+    // alert(area(5));
+
+    const myFunction = (a,b,c) => {return a*b*c}
+    let product = myFunction(8,8,8);
+    document.getElementById('demo').innerHTML="Product of a,b,c is="+product;
+  </script>
+</body>
+</html>

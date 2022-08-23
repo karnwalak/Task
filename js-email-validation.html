@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-Email Validation</title>
+</head>
+<body>
+  <form>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+      <input type="submit" value="Submit" onclick="return validate()">
+    </div>
+  </form>
+  <script>
+    function validate(){
+      var email = document.getElementById('email').value;
+      var regx = /^([a-zA-Z0_9\._]+)@([a-zA-Z0_9])+.([a-z]+)(.[a-z]+)?$/;
+      if(regx.test(email)){
+        alert("email is correct!");
+        return true;
+      }else if(email == ''){
+        alert("please enter your email!");
+        return false;
+      }else{
+        alert("Email is incorrect!");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
