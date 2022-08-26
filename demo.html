@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo-JS</title>
+</head>
+<body>
+  <script>
+    // spread operator
+
+    let list = ["Akshay","Ankit","Yogesh","Anuj"];
+    // let newList = [...list,'Aashish','Ketan','Akhilesh'];
+    // let car = {
+    //   name: "Audi",
+    //   class: "NA",
+    //   id: "NA"
+    // }
+    // let newCar = {
+    //   engine: "BMW",
+    //   ...car
+    // }
+
+    // rest operator
+    // function car(...all){
+    //   console.log(all);
+    //   console.log(all[0]);
+    //   console.log(all[1]);
+    //   console.log(all[2]);
+    //   console.log(all[3]);
+    //   console.log(all[4]);
+    // }
+    // car("Audi","BMW","Swift","Altroz","Ferrari");
+
+    //array destructuring
+    // let [one,two,three,four] = list;
+    // console.log(one);
+    // console.log(two);
+    // console.log(three);
+    // console.log(four);
+
+    // let [one,two,three,four] = list;
+    // console.log(one);
+    // console.log(two);
+
+    // let [one,,,four] = list;
+    // console.log(one);
+    // console.log(four);
+
+    //object destructuring
+    // const car = {
+    //   name: "Audi",
+    //   age: 28,
+    //   city: "Saharanpur"
+    // }
+
+    // let {name , age , city} = car;
+    // console.log(name);
+    // console.log(age);
+    // console.log(city);
+
+    // map function
+    // list.map((key,val)=>{
+    //   console.log(key + '-' +val);
+    // })
+
+    //filter function
+    let number = [2,3,45,54,65,21,10];
+    // let arry=number.filter(x=>x%2==0);
+    let arry=number.filter(function(x){
+      if(x%2==0){
+        return x;
+      }
+    });
+    console.log(arry);
+  </script>
+</body>
+</html>
